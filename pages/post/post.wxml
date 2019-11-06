@@ -1,0 +1,5 @@
+<!--pages/post/post.wxml-->
+<view class="container">
+  <text>此页面暂未开发</text>
+  <v-button type="primary">Button</v-button>
+</view>

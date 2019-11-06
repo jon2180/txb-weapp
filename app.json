@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/chat/chat",
+    "pages/post/post",
+    "pages/mine/mine",
+    "pages/publish/publish"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "淘小北",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "assets/images/index.png",
+        "selectedIconPath": "assets/images/index-active.png",
+        "text": "淘淘"
+      },
+      {
+        "pagePath": "pages/post/post",
+        "iconPath": "assets/images/index.png",
+        "selectedIconPath": "assets/images/index-active.png",
+        "text": "讨论"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "iconPath": "assets/images/index.png",
+        "selectedIconPath": "assets/images/index-active.png",
+        "text": "发布"
+      },
+      {
+        "pagePath": "pages/chat/chat",
+        "iconPath": "assets/images/index.png",
+        "selectedIconPath": "assets/images/index-active.png",
+        "text": "消息"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "assets/images/index.png",
+        "selectedIconPath": "assets/images/index-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

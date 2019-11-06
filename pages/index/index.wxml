@@ -1,0 +1,77 @@
+<!--index.wxml-->
+<view>
+  <!-- search bar START -->
+  <view class="search_bar">
+    <input class="search_bar-input" disabled></input>
+  </view>
+  <!-- search bar END -->
+
+  <!-- banner START -->
+  <view class="banner">
+    <swiper class="banner-container" indicator-dots="{{indicator}}">
+      <block wx:for="{{bannerImages}}" wx:key="{{index}}">
+        <swiper-item>
+          <image class="banner-item" src="{{item}}"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- banner END -->
+
+  <!-- catogories area START -->
+  <view class="categories">
+    <view class="categories-row-1">
+      <view class="category">
+        <image class="category-icon" src="/assets/images/index.png"></image>
+        <text class="category-label">美妆</text>
+      </view>
+      <view class="category">
+        <image class="category-icon" src="/assets/images/index.png"></image>
+        <text class="category-label">美妆</text>
+      </view>
+      <view class="category">
+        <image class="category-icon" src="/assets/images/index.png"></image>
+        <text class="category-label">美妆</text>
+      </view>
+      <view class="category">
+        <image class="category-icon" src="/assets/images/index.png"></image>
+        <text class="category-label">美妆</text>
+      </view>
+    </view>
+    <view class="categories-row-2">
+      <view class="category">
+        <image class="category-icon" src="/assets/images/index.png"></image>
+        <text class="category-label">美妆</text>
+      </view>
+      <view class="category">
+        <image class="category-icon" src="/assets/images/index.png"></image>
+        <text class="category-label">美妆</text>
+      </view>
+      <view class="category">
+        <image class="category-icon" src="/assets/images/index.png"></image>
+        <text class="category-label">美妆</text>
+      </view>
+      <view class="category">
+        <image class="category-icon" src="/assets/images/index.png"></image>
+        <text class="category-label">美妆</text>
+      </view>
+    </view>
+  </view>
+  <!-- catogories area END -->
+
+  <!-- navigation area START -->
+  <view class="nav_bar">
+    <block wx:for="{{categories}}" wx:key="index">
+      <text class="nav_bar-item">{{item}}</text>
+    </block>
+  </view>
+  <!-- navigation area END -->
+
+  <!-- commodities area START -->
+  <view class="goods-list">
+    <block wx:for="{{commodities}}" wx:key="{{index}}">
+      <view class="good-item"></view>
+    </block>
+  </view>
+  <!-- commodities area END -->
+</view>
