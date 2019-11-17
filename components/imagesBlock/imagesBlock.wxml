@@ -1,0 +1,12 @@
+<!--components/ImagesBlock/ImagesBlock.wxml-->
+<view wx:if="{{images && images.length > 0}}" class="c-images-block {{ 'images-' + images.length }}" >
+  <image
+    wx:for="{{images}}"
+    wx:key="{{index}}"
+    src="{{item}}"
+    mode="aspectFill"
+    catchtap="bindPreviewImage"
+    data-index="{{index}}"
+    class="image {{ 'image-' + (index + 1)}}"
+  ></image>
+</view>

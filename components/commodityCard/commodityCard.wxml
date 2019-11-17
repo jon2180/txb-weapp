@@ -1,0 +1,21 @@
+<!--components/commodityCard/commodityCard.wxml-->
+<navigator url="{{url}}">
+  <view class="good-item">
+    <image wx:if="{{commodityInfo.imageUrl}}" class="good-img" mode="aspectFill" src="{{commodityInfo.imageUrl}}" />
+    <view class="good-info">
+      <view class="good-desc">{{commodityInfo.desc}}</view>
+      <view class="good-sell">
+        <text class="good-price">￥{{commodityInfo.price}}</text>
+        <text class="good-click">{{commodityInfo.clickNum}}次浏览</text>
+      </view>
+      <view class="good-origin">
+        <image class="good-origin-avatar" src="{{commodityInfo.origin.avatarUrl}}"></image>
+        <view class="good-origin-info">
+          <view>{{commodityInfo.origin.nickname}}</view>
+          <view>{{commodityInfo.time}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</navigator>
+<!-- </block> -->

@@ -1,0 +1,47 @@
+<!-- index.wxml -->
+<view>
+  <!-- search bar START -->
+   <view class="search_bar">
+    <navigator url="../search/search" hover-class="none">
+      <van-search placeholder="{{placeholderForSearch}}" shape="{{'round'}}" disabled/>
+    </navigator>
+  </view>
+  <!-- search bar END -->
+
+  <!-- banner START -->
+  <view class="banner">
+    <swiper class="banner-container" indicator-dots="{{indicator}}">
+      <block wx:for="{{banners}}" wx:key="{{index}}">
+        <swiper-item>
+          <navigator class="navigator" target="" url="{{item.redirectTo}}" hover-class="navigator-hover" open-type="navigate">
+            <image class="banner-item" src="{{item.imageUrl}}"></image>
+          </navigator>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- banner END -->
+  
+  <!-- catogories area START -->
+  <view class="categories">
+    <van-grid clickable column-num="4">
+      <van-grid-item wx:for="{{categories}}" wx:key="{{index}}" icon="photo-o" text="{{item}}" />
+    </van-grid>
+  </view>
+  <!-- catogories area END -->
+
+  <!-- navigation area START -->
+  <view class="nav_bar">
+    <block wx:for="{{categories}}" wx:key="index">
+      <text class="nav_bar-item">{{item}}</text>
+    </block>
+  </view>
+  <!-- navigation area END -->
+  <!-- commodities area START -->
+  <view class="goods-list">
+    <block wx:for="{{commodities}}" wx:key="{{index}}">
+      <c-commodity-card commodity-info="{{item}}" url="../commodityDetail/commodityDetail?_id=item._id" />
+    </block>
+  </view>
+  <!-- commodities area END -->
+</view>

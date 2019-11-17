@@ -1,10 +1,11 @@
 {
   "pages": [
-    "pages/index/index",
-    "pages/chat/chat",
-    "pages/post/post",
-    "pages/mine/mine",
-    "pages/publish/publish"
+    "pages/home/index/index",
+    "pages/messages/index/index",
+    "pages/post/index/index",
+    "pages/me/index/index",
+    "pages/upload/index/index",
+    "pages/auth/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,31 +16,31 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/index/index",
+        "pagePath": "pages/home/index/index",
         "iconPath": "assets/images/index.png",
         "selectedIconPath": "assets/images/index-active.png",
         "text": "淘淘"
       },
       {
-        "pagePath": "pages/post/post",
+        "pagePath": "pages/post/index/index",
         "iconPath": "assets/images/index.png",
         "selectedIconPath": "assets/images/index-active.png",
         "text": "讨论"
       },
       {
-        "pagePath": "pages/publish/publish",
+        "pagePath": "pages/upload/index/index",
         "iconPath": "assets/images/index.png",
         "selectedIconPath": "assets/images/index-active.png",
         "text": "发布"
       },
       {
-        "pagePath": "pages/chat/chat",
+        "pagePath": "pages/messages/index/index",
         "iconPath": "assets/images/index.png",
         "selectedIconPath": "assets/images/index-active.png",
         "text": "消息"
       },
       {
-        "pagePath": "pages/mine/mine",
+        "pagePath": "pages/me/index/index",
         "iconPath": "assets/images/index.png",
         "selectedIconPath": "assets/images/index-active.png",
         "text": "我的"

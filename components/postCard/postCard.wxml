@@ -1,0 +1,21 @@
+<!-- components/post/post.wxml -->
+<!-- <text>components/post/post.wxml</text> -->
+<view class="post-box">
+  <view wx:if="{{showAuthor}}" class="author-block">
+    <!-- 头像：有则设置成对应头像，无则设置为默认的头像，当前默认头像是本地的 /images/user-unlogin.png -->
+    <image class="avatar" src="{{userInfo.avatarUrl ? userInfo.avatarUrl : '/images/user-unlogin.png'}}"></image>
+    <view class="info">
+      <view>{{userInfo.nickname || '佚名'}}</view>
+      <view>{{post.time}}</view>
+    </view>
+  </view>
+  <view class="content-block">{{post.content}}</view>
+  <c-images-block images="{{post.images}}" />
+  <view class="tags-block">
+    <view wx:for="{{post.tags}}" wx:key="{{index}}" class="tag">#{{item}}#</view>
+  </view>
+  <view wx:if="{{showHeat}}" class="heat-block">
+    <view bindtap="bindLikeConfession">{{post.likes}} 喜欢</view>
+    <view>{{post.comments.length}} 评论</view>
+  </view>
+</view>

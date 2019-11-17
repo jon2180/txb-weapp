@@ -1,0 +1,33 @@
+/* pages/Auth/Auth.wxss */
+
+open-data {
+  display: block;
+}
+
+.open_data-box {
+  display: flex;
+  width: 70%;
+  padding: 50rpx 30rpx;
+  box-sizing: border-box;
+  border-radius: 16rpx;
+  background-color: #fff;
+  box-shadow: #f3f6f8 10rpx 10rpx;
+  margin: 10vh auto;
+}
+
+.avatar, .avatar .avatar-img {
+  width: 128rpx;
+  height: 128rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.open_data-box .info {
+  margin-left: 16rpx;
+  line-height: 64rpx;
+}
+
+.auth-btn {
+  width: 61%;
+  margin: 0 auto;
+}

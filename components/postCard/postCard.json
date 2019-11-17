@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "c-images-block": "/components/imagesBlock/imagesBlock"
+  }
+}

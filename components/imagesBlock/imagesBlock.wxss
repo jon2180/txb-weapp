@@ -1,0 +1,81 @@
+/* components/ImagesBlock/ImagesBlock.wxss */
+
+/* 这是个相当笨的办法，如果不是必要，请不要模仿 */
+
+/* 总 */
+.c-images-block {
+  display: flex;
+  /* justify-content: space-between; */
+  flex-wrap: wrap;
+  width: 690rpx;
+}
+
+/* 1 2 4 个为特殊数字 */
+.images-1, .images-2, .images-4 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.images-1 .image {
+  width: 100%;
+  max-height: 700rpx;
+}
+
+.images-2 .image,
+.images-4 .image {
+  width: 338rpx;
+  height: 338rpx;
+  margin-top: 15rpx;
+}
+
+/* 普通图片数量 */
+
+.images-3,
+.images-5,
+.images-6,
+.images-7,
+.images-8,
+.images-9 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 690rpx;
+}
+
+
+.images-3 .image,
+.images-5 .image,
+.images-6 .image,
+.images-7 .image,
+.images-8 .image,
+.images-9 .image {
+  width: 220rpx;
+  height: 220rpx;
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+}
+
+.images-3 .image-1,
+.images-5 .image-1,
+.images-5 .image-4,
+.images-6 .image-1,
+.images-6 .image-4,
+.images-7 .image-1,
+.images-7 .image-4,
+.images-7 .image-7,
+.images-8 .image-1,
+.images-8 .image-4,
+.images-8 .image-7,
+.images-9 .image-1,
+.images-9 .image-4,
+.images-9 .image-7 {
+  margin-left: 0;
+}
+
+.image-1, .image-2, .image-3 {
+  margin-top: 0 !important;
+}
+
+.images-4 .image-3 {
+  margin-top: 15rpx !important;
+}

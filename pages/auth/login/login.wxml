@@ -1,0 +1,7 @@
+<!--pages/auth/login/login.wxml-->
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+<open-data type="userGender"></open-data>
+
+<button wx:if="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">授权</button>
+<view wx:else>请升级微信版本</view>
