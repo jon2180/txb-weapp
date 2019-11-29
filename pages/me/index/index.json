@@ -1,3 +1,9 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-tag": "/lib/vant/tag/index",
+    "van-grid": "/lib/vant/grid/index",
+    "van-grid-item": "/lib/vant/grid-item/index",
+    "van-cell": "/lib/vant/cell/index",
+    "van-cell-group": "/lib/vant/cell-group/index"
+  }
 }

@@ -1,4 +1,4 @@
-// pages/post/post.js
+// pages/post/index/index.js
 Page({
 
   /**

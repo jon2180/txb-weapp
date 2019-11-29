@@ -1,4 +1,4 @@
-// pages/upload/index.js
+// pages/search/search/search.js
 Page({
 
   /**

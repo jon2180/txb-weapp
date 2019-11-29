@@ -5,7 +5,13 @@
     "pages/post/index/index",
     "pages/me/index/index",
     "pages/upload/index/index",
-    "pages/auth/login/login"
+    "pages/upload/commodity/commodity",
+    "pages/upload/post/post",
+    "pages/auth/login/login",
+    "pages/details/user/user",
+    "pages/details/commodity/commodity",
+    "pages/details/post/post",
+    "pages/search/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

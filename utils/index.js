@@ -4,7 +4,7 @@
  * @param wait {number} 防抖时间
  * @return {function} 防抖函数
  */
-function debounce(fn, wait) {
+export function debounce(fn, wait) {
   let timer = null;
   return function() {
     const context = this
@@ -25,7 +25,7 @@ function debounce(fn, wait) {
  * @param gapTime {number} 间隔时间
  * @return {function} 节流函数
  */
-function throttle(fn, gapTime) {
+export function throttle(fn, gapTime) {
   let _lastTime = null;
 
   return function() {
@@ -42,7 +42,7 @@ function throttle(fn, gapTime) {
  * @param n {number} 数字
  * @return {string} 加上了前置0的字符串
  */
-const formatNumber = n => {
+export const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
@@ -52,7 +52,7 @@ const formatNumber = n => {
  * @param date {Date} 日期对象
  * @return {string} 格式化结果
  */
-const formatDate = date => {
+export const formatDate = date => {
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const day = date.getDate()
@@ -68,7 +68,7 @@ const formatDate = date => {
  * @param timestamp {number} 十三位时间戳
  * @return {string}
  */
-const formatTime = timestamp => {
+export const formatTime = timestamp => {
   const date = new Date(timestamp)
   const year = date.getFullYear()
   const month = date.getMonth() + 1
@@ -107,15 +107,7 @@ const formatTime = timestamp => {
  * @param filePath {string} 文件本地缓存路径
  * @return {string} 云端路径
  */
-const getFileCloudPath = filePath => {
+export const formatPath = filePath => {
   return 'upload/' + Date.now() +
     '.' + Math.floor(Math.random() * 9999) + filePath.match(/\.[^.]+?$/)[0]
-}
-
-export {
-  debounce,
-  throttle,
-  formatDate,
-  formatTime,
-  getFileCloudPath
 }

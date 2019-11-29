@@ -1,0 +1,86 @@
+
+<view class="content-container">
+  <!-- 输入框 -->
+  <view>
+    <textarea
+      placeholder="{{placeholder}}"
+      bindinput="bindChangeContent"
+      class="content_textarea"
+    ></textarea>
+  </view>
+
+  <!-- 标签栏 -->
+  <view class="tags-box">
+    <block wx:for="{{tags}}" wx:key="{{index}}">
+      <text class="tag" data-tagname="{{item}}" bindtap="bindRemoveTag">{{'#' + item + '#'}}</text>
+    </block>
+    <!-- 标签数限制最大数5个 -->
+    <text wx:if="{{tags.length < 5}}" bindtap="bindOpenActionSheet" class="tag">添加标签</text>
+  </view>
+
+
+  <van-action-sheet
+    show="{{ show }}"
+    title="标题"
+    bind:close="bindCloseActionSheet"
+  >
+    <view class="tag_choose-panel">
+      <input
+        value="{{tagChooseController.keyword}}"
+        maxlength="6"
+        placeholder="{{tagChooseController.placeholder}}"
+        bindinput="bindInputKeyword"
+        class="input_search"
+      ></input>
+
+      <view wx:if="{{tagChooseController.relatedTags.length > 0}}" class="tags-box">
+        <view>相关标签</view>
+        <text
+          wx:if="{{tagChooseController.keyword !== ''}}"
+          bindtap="bindSelectTag"
+          data-tagname="{{tagChooseController.keyword}}"
+          class="tag"
+        >{{tagChooseController.keyword}}(创建)</text>
+        <text
+          wx:for="{{tagChooseController.relatedTags}}"
+          wx:key="{{index}}"
+          data-tagname="{{item}}"
+          bindtap="bindSelectTag"
+          class="tag"
+        >{{item}}</text>
+      </view>
+    </view>
+  </van-action-sheet>
+
+
+  <!-- 添加图片 -->
+  <view class="images-box">
+    <!-- 其中 data-index 目的是：把 index 放入事件的 target.dataset中，让绑定的预览事件处理函数可以获取 -->
+    <view 
+      wx:for="{{images}}"
+      wx:key="{{index}}"
+      class="image-box"
+    >
+      <image
+        class="image"
+        src="{{item}}"
+        mode="aspectFill"
+        catchtap="bindPreviewImage"
+        data-index="{{index}}"
+      ></image>
+      <view class="btn-remove_img" catchtap="bindRemoveImage" data-index="{{index}}">x</view>
+    </view>
+    <image wx:if="{{images.length < 9}}" class="image-box" bindtap="bindChooseImage" src="/assets/images/add.png"></image>
+  </view>
+</view>
+
+<view class="placeholder-box"></view>
+
+<!-- 操作按钮 -->
+<view class="operation-block">
+  <view class="operations">
+    <button  bindtap="bindUploadConfession" data-isAnonymous="1" class="btn">匿名发布</button>
+    <button bindtap="bindUploadConfession"  data-isAnonymous="0" class="btn btn-upload">发布</button>
+  </view>
+</view>
+

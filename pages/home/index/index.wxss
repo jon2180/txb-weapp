@@ -1,30 +1,16 @@
 /**index.wxss**/
 
-.search_bar {
-  height: 64rpx;
-  width: 750rpx;
-  position: relative;
-}
-
-.search_bar-input {
-  box-sizing: border-box;
-  height: 48rpx;
-  width: 690rpx;
+page {
   background-color: #fff;
-  border: #fff solid 1px;
-  border-radius: 24rpx;
-  margin: 8rpx auto;
-  padding: 0 30rpx;
-  text-align: center;
-  font-size: 32rpx;
-}
-
-.banner {
-  height: 310rpx;
-  width: 750rpx;
 }
 
 .banner-container {
+  height: 310rpx;
+  width: 750rpx;
+  background-color: #fff;
+}
+
+.banner {
   height: 310rpx;
   width: 750rpx;
 }
@@ -38,107 +24,20 @@
 
 .categories {
   width: 750rpx;
+  padding: 18rpx 30rpx;
+  box-sizing: border-box;
   /* height: 150px; *//* background: #f3f6f8; */
 }
 
-.categories-row-1, .categories-row-2 {
-  display: flex;
-  justify-content: space-around;
-  margin: 30rpx 0;
-}
-
-.category .category-icon {
-  display: block;
-  width: 81rpx;
-  height: 81rpx;
-}
-
-.category-label {
-  display: block;
-  text-align: center;
-  font-size: 28rpx;
-}
-
-.nav_bar {
-  width: 690rpx;
-  height: 64rpx;
-  margin: 0 auto;
-  white-space: nowrap;
-  overflow-x: hidden;
-}
-
-.nav_bar-item {
-  display: inline-block;
-  width: 100rpx;
+.commodities-container {
+  width: 750rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
 }
 
 .goods-list {
-  width: 690rpx;
-  height: auto;
-  margin: 0 auto;
-  /* background: #f2f2f2; */
   display: flex;
   justify-content: space-between;
-  /* align-content: space-between; */
   column-gap: 20rpx;
   flex-wrap: wrap;
-}
-
-.good-item {
-  border-radius: 15rpx;
-  width: 335rpx;
-  height: 542rpx;
-  background: #fff;
-}
-
-.good-item .good-img {
-  border-radius: 15rpx 15rpx 0 0;
-  width: 100%;
-  height: 335rpx;
-}
-
-.good-item .good-intro {
-  width: 305rpx;
-  margin: 0 auto;
-}
-
-.good-item .good-desc {
-  /* padding: 20rpx 0;
-  box-sizing: border-box; */
-  display:-webkit-box;
-  font-size: 34rpx;
-  line-height: 36rpx;
-  width: 100%;
-  text-align: justify;
-  height: 72rpx;
-  overflow: hidden; /*溢出隐藏*/
-  text-overflow: ellipsis; /*以省略号...显示*/
-  /* white-space: nowrap; */ /*强制不换行*/
-  
-  -webkit-line-clamp: 2;
-  -webkit-box-orient:vertical;
-}
-
-.good-item .good-price {
-  display: flex;
-  justify-content: space-between;
-}
-
-.good-item .good-click {
-  font-size: 17px;
-}
-
-.good-item .good-origin {
-  display: flex;
-  justify-content: space-between;
-}
-
-.good-origin .good-origin-avatar {
-  width: 81rpx;
-  height: 81rpx;
-  border-radius: 50%;
-}
-
-.good-origin .good-origin-info {
-  width: 230rpx;
 }

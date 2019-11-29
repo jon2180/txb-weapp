@@ -3,15 +3,14 @@
 .good-item {
   border-radius: 15rpx;
   width: 335rpx;
-  /* height: 542rpx; */
   background: #fff;
   margin-bottom: 20rpx;
   overflow: hidden;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* border: #fff solid 1px; */
+  border: #f6f6f6 solid 1px;
+  box-shadow: 10rox 10rpx #f6f6f6;
 }
 
 .good-item .good-img {
@@ -70,4 +69,10 @@
 .good-origin .good-origin-info view:nth-child(2) {
   font-size: 28rpx;
   color: #666;
+}
+
+.nickname {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

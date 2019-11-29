@@ -1,4 +1,46 @@
-<!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<!--pages/me/index/index.wxml-->
+
+<view>
+  <view class="profile-card">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view class="info">
+      <view class="info-nickname">{{userInfo.nickName}} | {{userInfo.gender}}</view>
+      <view class="info-nav_to_profile">
+        <navigator url="../../details/user/user?openid={{openid}}" hover-class="none">
+          主页 >
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+  <view class="main-card">
+    <van-grid border="false" clickable>
+      <van-grid-item icon="photo-o" text="我的闲置" />
+      <van-grid-item icon="photo-o" text="我的买入" />
+      <van-grid-item icon="photo-o" text="我的卖出" />
+    </van-grid>
+  </view>
+
+  <view class="main-card">
+    <van-grid border="false" clickable>
+      <van-grid-item icon="photo-o" text="我的拼单" />
+      <van-grid-item icon="photo-o" text="我的打听" />
+      <van-grid-item icon="photo-o" text="我的收藏" />
+    </van-grid>
+  </view>
+  <view>
+    <van-cell title="个人信息" icon="user-circle-o" is-link url="../info/info">
+      <view slot="title">
+        <van-icon slot="right-icon" name="search" class="custom-icon" />
+      </view>
+    </van-cell>
+    <van-cell title="设置" icon="setting-o" is-link>
+      <van-icon slot="right-icon" name="search" class="custom-icon" />
+    </van-cell>
+    <van-cell title="分享" icon="share" is-link bind:click="bindShare">
+      <van-icon slot="right-icon" name="search" class="custom-icon" />
+    </van-cell>
+  </view>
 
 
+</view>

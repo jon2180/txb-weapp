@@ -2,12 +2,16 @@
 <view class="box">
   <view class="publish-container">
     <view class="pub-commodity">
-      <image class="pub-commodity-icon" src="/assets/banner-01.jpg"></image>
-      <text class="pub-commodity-label">发布二手</text>
+      <navigator url="../commodity/commodity" hover-class="none">
+        <image class="pub-commodity-icon" src="/assets/banner-01.jpg"></image>
+        <text class="pub-commodity-label">发布二手</text>
+      </navigator>
     </view>
     <view class="pub-commodity">
-      <image class="pub-commodity-icon" src="/assets/banner-01.jpg"></image>
-      <text class="pub-commodity-label">发布校园通</text>
+      <navigator url="../post/post" hover-class="none">
+        <image class="pub-commodity-icon" src="/assets/banner-01.jpg"></image>
+        <text class="pub-commodity-label">发布校园通</text>
+      </navigator>
     </view>
   </view>
 </view>

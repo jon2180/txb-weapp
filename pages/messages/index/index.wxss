@@ -1,4 +1,7 @@
 /* pages/chat/chat.wxss */
+page {
+  background-color: #fff;
+}
 
 .navigation {
   width: 570rpx;
@@ -10,7 +13,7 @@
   background-color: #f3f6f8;
   padding: 30rpx;
   border-radius: 30rpx;
-  box-shadow: 5rpx 5rpx 5rpx #f3f6f8;
+  /* box-shadow: 5rpx 5rpx 5rpx #f3f6f8; */
 }
 
 .nav-icon {
