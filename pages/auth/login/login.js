@@ -10,6 +10,9 @@ Page({
    * Page initial data
    */
   data: {
+    userInfo: {},
+    hasUserInfo: false,
+    // canIUse: wx.canIUse('button.open-type.getUserInfo')
     canIUse: wx.canIUse('button.open-type.getUserInfo')
   },
 
@@ -88,84 +91,6 @@ Page({
         }
       }
     })
-    // bindGetUserInfoDeprecated();
-    // wx.getSetting({
-    //   success(res) {
-    //     if (res.authSetting['scope.userInfo']) {
-    //       // 已经授权，可以直接调用 getUserInfo 获取头像昵称
-    //       wx.getUserInfo({
-    //         success(res) {
-    //           console.log(res.userInfo)
-    //         }
-    //       })
-    //     } else {
-    //       console.log("用户尚未授权")
-    //     }
-    //   }
-    // })
-  },
-
-  /**
-   * Lifecycle function--Called when page is initially rendered
-   */
-  onReady: function() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page hide
-   */
-  onHide: function() {
-
-  },
-
-  /**
-   * Lifecycle function--Called when page unload
-   */
-  onUnload: function() {
-
-  },
-
-  /**
-   * Page event handler function--Called when user drop down
-   */
-  onPullDownRefresh: function() {
-
-  },
-
-  /**
-   * Called when page reach bottom
-   */
-  onReachBottom: function() {
-
-  },
-
-  /**
-   * Called when user click on the top right corner to share
-   */
-  onShareAppMessage: function() {
-
-  },
-
-  bindGetUserInfoDeprecated(detail) {
-
-
-
-
-
-    // 先查看用户是否已经给了授权 给了就直接获取信息，直接登录，没有就打开授权功能
-
-
-
-
-
   },
 
   bindGetUserInfo(e) {

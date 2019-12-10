@@ -19,15 +19,15 @@
   <!-- banner轮播图 END -->
 
   <!-- catogories area分类 START -->
-  <view class="categories">
+  <!-- <view class="categories">
     <van-grid clickable column-num="4">
-      <van-grid-item wx:for="{{categories}}" wx:key="{{index}}" icon="photo-o" text="{{item}}" />
+      <van-grid-item wx:for="{{categories}}" wx:key="{{index}}" icon="photo-o" text="{{item}}" url="../category/category"/>
     </van-grid>
-  </view>
+  </view> -->
   <!-- catogories area分类 END -->
   <view class="commodities-container">
     <van-tabs active="{{ active }}" bind:change="bindChangeTab" animated color="#00bd9c" sticky ellipsis lazy-render>
-      <van-tab wx:for="{{list}}" wx:for-index="tabsIndex" wx:for-item="commodities" wx:key="{{tabsIndex}}" title="{{commodities.title}}">
+      <van-tab wx:for="{{list}}" wx:for-index="tabsIndex" wx:for-item="commodities" wx:key="{{tabsIndex}}"  name="{{tabsIndex}}" title="{{commodities.title}}">
         <view class="goods-list">
           <c-commodity-card wx:for="{{commodities.list}}" wx:key="{{index}}" commodity-info="{{item}}" url="../../details/commodity/commodity?_id=item._id" />
         </view>
@@ -36,3 +36,7 @@
   </view>
 
 </view>
+
+<van-popup show="{{showCheckSchool}}" bind:close="bindClosePopup" custom-style="height: 200px; width:80%" close-on-click-overlay="{{ false }}">
+  <van-picker show-toolbar bind:cancel="bindCancelCheckSchool" bind:confirm="bindConfirmSchool" columns="{{schools}}" default-index="{{ 0 }}" />
+</van-popup>

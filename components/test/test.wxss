@@ -1,6 +1,0 @@
-/* components/test/test.wxss */
-
-/* /components/index.wxss */
-.index {
-  color: green;
-}

@@ -1,5 +1,0 @@
-<!--components/test/test.wxml-->
-<text>components/test/test.wxml</text>
-
-<!-- /components/index.wmxl -->
-<view class="index">{{prop}}</view>

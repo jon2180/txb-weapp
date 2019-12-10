@@ -1,5 +1,14 @@
 {
   "usingComponents": {
-    "v-button": "/lib/vant/button/index"
-  }
+    "van-tab": "/lib/vant/tab/index",
+    "van-tabs": "/lib/vant/tabs/index",
+    "van-grid": "/lib/vant/grid/index",
+    "van-grid-item": "/lib/vant/grid-item/index",
+    "van-divider": "/lib/vant/divider/index",
+    "van-search": "/lib/vant/search/index",
+    "van-popup": "/lib/vant/popup/index",
+    "van-picker": "/lib/vant/picker/index",
+    "c-post": "/components/postCard/postCard"
+  },
+  "enablePullDownRefresh": true
 }

@@ -1,10 +1,90 @@
 /* pages/post/post.wxss */
 
-.container {
-  height: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+page {
+  background-color: #fff;
+}
+
+.banner-container {
+  height: 310rpx;
+  width: 750rpx;
+  /* background-color: #fff; */
+}
+
+.banner {
+  height: 310rpx;
+  width: 750rpx;
+}
+
+.banner .banner-item {
+  width: 690rpx;
+  height: 310rpx;
+  margin: 0 30rpx;
+  border-radius: 10rpx;
+}
+
+.posts-container {
+  background-color: #f6f6f6;
+}
+
+.post-box {
+  width: 100%;
+  padding: 30rpx;
   box-sizing: border-box;
+  background-color: #fff;
+  margin-bottom: 16rpx;
+}
+
+.post-box .author-block {
+  display: flex;
+  justify-content: left;
+}
+
+.author-block .avatar {
+  width: 98rpx;
+  height: 98rpx;
+  border: none;
+  border-radius: 50%;
+}
+
+.author-block .info {
+  height: 100%;
+  margin-left: 16rpx;
+}
+
+.author-block .info view {
+  line-height: 49rpx;
+}
+
+.post-box .content-block {
+  margin-top: 30rpx;
+  width: 100%;
+}
+
+.post-box .images-block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 690rpx;
+}
+
+.images-block .image {
+  width: 210rpx;
+  height: 210rpx;
+  margin: 10rpx;
+}
+
+.post-box .tags-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  width: 100%;
+}
+
+.tags-block .tag {
+  margin: 16rpx;
+  color: #00bd9c;
+}
+
+.post-box .heat-block {
+  display: flex;
+  justify-content: space-around;
 }

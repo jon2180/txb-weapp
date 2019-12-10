@@ -21,13 +21,13 @@
     </van-grid>
   </view>
 
-  <view class="main-card">
+  <!-- <view class="main-card">
     <van-grid border="false" clickable>
       <van-grid-item icon="photo-o" text="我的拼单" />
       <van-grid-item icon="photo-o" text="我的打听" />
       <van-grid-item icon="photo-o" text="我的收藏" />
     </van-grid>
-  </view>
+  </view> -->
   <view>
     <van-cell title="个人信息" icon="user-circle-o" is-link url="../info/info">
       <view slot="title">

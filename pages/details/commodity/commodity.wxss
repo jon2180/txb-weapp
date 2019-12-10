@@ -1,1 +1,105 @@
 /* pages/details/commodity/commodity.wxss */
+
+.cmd-container, .cmts-container {
+  background-color: #fff;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.cmd-container .info > view {
+  margin: 16rpx 0;
+}
+
+.cmd-price {
+  color: #fd4647;
+  font-size: 13pt;
+  /* background-color: linear-gradient(#ff8497, #fd4647); */
+}
+
+.cmd-title {
+  color: #333;
+  font-size: 12pt;
+}
+
+.cmd-tags {
+  color: #999;
+  font-size: 11pt;
+}
+
+.cmd-desc {
+  color: #666;
+  font-size: 11pt;
+}
+
+.cmts-topic {
+  display: flex;
+  height: 48rpx;
+  line-height: 48rpx;
+  font-size: 14pt;
+  margin-bottom: 16rpx;
+  /* padding-left: 30rpx; */
+}
+
+.cmts-topic .barrier {
+  width: 10rpx;
+  height: 100%;
+  margin-right: 16rpx;
+  background: #fe6d6a no-repeat 20rpx 30rpx;
+}
+
+.cmt {
+  margin: 16rpx 0;
+}
+
+.cmt-origin-box {
+  display: flex;
+  justify-content: start;
+}
+
+.cmt-avatar {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 50%;
+  margin-right: 16rpx;
+}
+
+.cmt-nickname {
+  color: #666;
+  font-size: 11pt;
+  height: 32rpx;
+  line-height: 32rpx;
+}
+
+.cmt-time {
+  color: #999;
+  font-size: 10pt;
+  height: 32rpx;
+  line-height: 32rpx;
+}
+
+.cmt-content {
+  width: 610rpx;
+  color: #333;
+  font-size: 12pt;
+  padding-left: 80rpx;
+}
+
+.cmt-content view {
+  overflow: hidden;
+  overflow-wrap: break-word;
+  text-align: justify;
+}
+
+.oprts-bar {
+  display: flex;
+  flex-flow: row-reverse;
+  /** 固定在底部 */
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 128rpx;
+  padding: 24rpx;
+  box-sizing: border-box;
+  background-color: #f6f6f6;
+}

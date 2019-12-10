@@ -2,6 +2,7 @@
 
 // 这是用户条组件
 
+
 Component({
   /**
    * 组件的属性列表
@@ -11,11 +12,18 @@ Component({
       type: String,
       value: '',
     },
-    nickname: {
+
+    nickName: {
       type: String,
       value: ''
     },
-    time: Number,
+
+    showTime: {
+      type: Boolean,
+      value: true
+    },
+
+    time: String,
   },
 
   /**

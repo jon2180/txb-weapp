@@ -5,30 +5,7 @@ Component({
    * Component properties
    */
   properties: {
-    showAuthor: {
-      type: Boolean,
-      value: false
-    },
-    showHeat: {
-      type: Boolean,
-      value: false
-    },
-
-    isLink: {
-      type: Boolean,
-      value: false
-    },
-    
-    linkType: {
-      type: String,
-      value: 'navigateTo'
-    },
-
-    url: {
-      type: String,
-      value: ''
-    },
-
+    /** 帖子主要信息 */
     post: {
       type: Object,
       value: {
@@ -38,41 +15,62 @@ Component({
         tags: [],
         comments: [],
         likes: 10,
-        time: 0
+        time: 0,
+        origin: {
+          type: Object,
+          value: {
+            avatarUrl: '',
+            nickName: ''
+          },
+        }
       },
     },
-    userInfo: {
-      type: Object,
-      value: {
-        avatarUrl: '',
-        nickname: '',
-        age: 18,
-        gengder: 0,
-      },
-    }
 
+    /** 是否已经对该表白帖点赞 */
+    hasLike: {
+      type: Boolean,
+      value: false
+    },
+
+    /** 是否显示作者信息（头像，昵称，时间） */
+    showAuthor: {
+      type: Boolean,
+      value: false
+    },
+
+    /** 是否展示热度和互动 */
+    showHeat: {
+      type: Boolean,
+      value: false
+    },
+
+    /** 是否展示标签 */
+    showTags: {
+      type: Boolean,
+      value: false
+    }
   },
 
   /**
    * Component initial data
    */
-  data: {
-    userInfo: {
-      avatarUrl: '',
-      nickname: '',
-      age: 18,
-      gengder: 0,
-    },
-
-    hasLike: false, // 是否已经对该表白帖点赞
-  },
+  data: {},
 
   /**
    * Component methods
    */
   methods: {
-    bindLikeConfession(e) {
-      console.log(e.target);
+    bindClickLikePost(e) {
+      this.triggerEvent('clickLikePost', { _id: e.target.dataset.id })
+    },
+
+    bindClickTag(e) {
+      this.triggerEvent('clickTag', { name: e.target.dataset.name })
+    },
+
+    bindClickPost(e) {
+      console.log(e)
+      this.triggerEvent('clickPost', { _id: e.currentTarget.dataset.id })
     }
   }
 })

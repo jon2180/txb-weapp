@@ -68,6 +68,20 @@
 					"id": -1,
 					"name": "我的",
 					"pathName": "pages/me/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/details/commodity/commodity",
+					"pathName": "pages/details/commodity/commodity",
+					"query": "id=fdsfas",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "上传商品",
+					"pathName": "pages/upload/commodity/commodity",
 					"scene": null
 				}
 			]

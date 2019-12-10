@@ -1,1 +1,31 @@
 /* pages/search/search/search.wxss */
+.block {
+  width: 100%;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+
+.title-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  color: #666;
+}
+
+.delete {
+  padding-top: 4rpx;
+  box-sizing: border-box;
+}
+
+.keyword {
+  font-size: 28rpx;
+  color: #333;
+  margin-right: 16rpx;
+  padding: 8px 15px;
+  background-color: #fff;
+  border-radius: 15rpx;
+}

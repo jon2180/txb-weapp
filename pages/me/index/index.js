@@ -6,6 +6,7 @@ Page({
    */
   data: {
     openid: '',
+    isCheckedSchool: false,
     userInfo: {
       avatarUrl: '',
       nickName: '',

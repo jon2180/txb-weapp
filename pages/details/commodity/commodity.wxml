@@ -1,2 +1,41 @@
 <!--pages/details/commodity/commodity.wxml-->
-<text>pages/details/commodity/commodity.wxml</text>
+
+<view class="cmd-container">
+
+  <c-author avatarUrl="{{cInfo.origin.avatarUrl}}" time="{{cInfo.time}}" nickName="{{cInfo.origin.nickName}}" />
+
+  <view class="info">
+    <view class="cmd-price">$ {{cInfo.price}}</view>
+    <view class="cmd-title">{{cInfo.title}}</view>
+    <view class="cmd-tags">{{cInfo.tags}}</view>
+    <view class="cmd-desc">{{cInfo.desc}}</view>
+    <c-images images="{{cInfo.images}}" />
+  </view>
+</view>
+
+<view style="width: 100%; height: 16rpx; background-color: #f6f6f6"></view>
+
+<view class="cmts-container">
+
+  <view class="cmts-topic">
+    <view class="barrier"></view>互动</view>
+  <view>
+    <view class="cmt" wx:for="{{cmts}}" wx:key="{{index}}">
+      <view class="cmt-origin-box">
+        <image src="{{item.avatarUrl}}" class="cmt-avatar" />
+        <view>
+          <view class="cmt-nickname">{{item.nickName}}</view>
+          <view class="cmt-time">{{item.time}}</view>
+        </view>
+      </view>
+      <view class="cmt-content">
+        <view>{{item.content}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="oprts-bar">
+  <van-button>留言</van-button>
+  <van-button>举报</van-button>
+</view>

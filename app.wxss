@@ -3,14 +3,3 @@
 page {
   background-color: #f6f6f6;
 }
-
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-
-  font-family: "PingFang";
-} 

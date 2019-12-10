@@ -1,5 +1,38 @@
 <!--pages/post/post.wxml-->
-<view class="container">
-  <text>此页面暂未开发</text>
-  <v-button type="primary">Button</v-button>
+
+<view>
+  <view class="search_bar">
+    <navigator url="../../search/index/index" hover-class="none">
+      <van-search placeholder="{{placeholderForSearch}}" shape="{{'round'}}" disabled />
+    </navigator>
+  </view>
+
+  <!-- banner轮播图 START -->
+  <view class="banner-container">
+    <swiper class="banner" indicator-dots="{{indicator}}">
+      <swiper-item wx:for="{{banners}}" wx:key="{{index}}">
+        <navigator class="navigator" target="" url="{{item.navTo}}" hover-class="navigator-hover" open-type="navigate">
+          <image class="banner-item" src="{{item.imageUrl}}"></image>
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- banner轮播图 END -->
+  <view>
+    <view class="posts-container">
+      <van-tabs active="{{ active }}" bind:change="bindChangeTab" animated color="#00bd9c" sticky ellipsis lazy-render>
+        <van-tab wx:for="{{list}}" wx:for-index="tabsIndex" wx:for-item="items" wx:key="{{tabsIndex}}"  name="{{tabsIndex}}" title="{{items.title}}">
+          <c-post
+            wx:for="{{items.data}}"
+            wx:key="{{index}}"
+            showAuthor showHeat
+            post="{{item}}"
+            bind:clickTag="bindTagClick"
+            bind:clickPost="bindClickPost"
+            bind:clickLikePost="bindClickLikePost"
+          />
+        </van-tab>
+      </van-tabs>
+    </view>
+  </view>
 </view>

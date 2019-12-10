@@ -1,3 +1,11 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-search": "/lib/vant/search/index",
+    "van-tab": "/lib/vant/tab/index",
+    "van-tabs": "/lib/vant/tabs/index",
+    "van-grid": "/lib/vant/grid/index",
+    "van-grid-item": "/lib/vant/grid-item/index",
+    "van-divider": "/lib/vant/divider/index",
+    "van-icon": "/lib/vant/icon/index"
+  }
 }

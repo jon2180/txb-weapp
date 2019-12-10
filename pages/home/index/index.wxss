@@ -7,7 +7,7 @@ page {
 .banner-container {
   height: 310rpx;
   width: 750rpx;
-  background-color: #fff;
+  /* background-color: #fff; */
 }
 
 .banner {

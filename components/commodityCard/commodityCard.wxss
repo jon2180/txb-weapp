@@ -61,7 +61,7 @@
 
 .good-origin .good-origin-info {
   margin-top: 10rpx;
-  width: 230rpx;
+  width: 205rpx;
   height: 80rpx;
   line-height: 40rpx;
 }

@@ -6,6 +6,8 @@
     "van-grid-item": "/lib/vant/grid-item/index",
     "van-divider": "/lib/vant/divider/index",
     "van-search": "/lib/vant/search/index",
+    "van-popup": "/lib/vant/popup/index",
+    "van-picker": "/lib/vant/picker/index",
     "c-post": "/components/postCard/postCard",
     "c-commodity-card": "/components/commodityCard/commodityCard"
   }

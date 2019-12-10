@@ -1,78 +1,83 @@
-
 import {
-  dbConfessions,
-  dbUserList
-} from './cloud-db.js'
+  txbRequest
+} from './request.js'
 
-const uploadConfession = data => {
-  return dbConfessions.add(data)
-}
 
-/**
- * 获取表白
- * @param condition {Object} 筛选条件
- * @return {Promise<Result>}
- */
-const getConfessions = (condition) => {
-  const whereFilter = {};
-  if (condition.openid) {
-    whereFilter.openid = condition.openid
-  }
-
-  if (condition.time) {
-    // console.log('...')
-  }
-
-  return dbConfessions.where(whereFilter).get()
-}
-
-/**
- * 从数据库获取用户信息
- * @param openid {string} 用户的openid
- * @return {Promise<any>}
- */
-const getUserInfoFromDb = openid => {
-  if (!openid) {
-    reject(Promise.reject(new Error('errMsg:invalidOpenId')))
-    return
-  }
-  return dbUserList.where({
-    _openid: openid
-  }).get()
-}
-
-/**
- * 注册
- * @praram data {Object} 注册信息，直接从getUserInfo的返回值中获取
- * @return {Promise<Result>} promise信息
- */
-const signUp = async(openid, data) => {
-  // let res;
-  try {
-
-    const res = await getUserInfoFromDb(openid)
-    if (res.data.length) {
-      console.error('用户已存在，不需要重新注册')
-      return new Error('errMsg:userHadSignUp')
+export const login = (encryptedData, iv) => {
+  wx.login({
+    success: res => {
+      if (res.code) {
+        // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        txbRequest({
+          data: {
+            code: res.code,
+            encrypteData: encryptedData,
+            iv: iv
+          },
+          url: '/wx/login/getSession',
+        }).then(_ => {
+          const data = _.data
+          if (data.code === 10000)
+            wx.setStorageSync('token', data.data)
+          else
+            console.log("login failed")
+        }).catch(err => {
+          console.log(err)
+        })
+      } // if -> res.code
     }
-    return await dbUserList.add({
-      data: {
-        ...data,
-        signature: '该用户什么都没有留下',
-        selling: [],
-        buying: [],
-        schoolInfo: {
-          school: '',
-          campus: '',
-          major: '',
-          isVerified: false,
-          id: '',
-          realName: ''
-        }
-      }
-    })
+  })
+}
 
-  } catch (e) {
-    console.error(e);
-  }
+export const log = () => {
+  // 查看是否授权
+  wx.getSetting({
+    success(res) {
+      if (res.authSetting['scope.userInfo']) {
+        // 已经授权，可以直接调用 getUserInfo 获取头像昵称
+        wx.getUserInfo({
+          success(res) {
+            // console.log(res)
+
+            const {
+              encryptedData,
+              iv
+            } = res
+            // 登录
+            wx.checkSession({
+              success(res) {
+                console.log(res)
+                login(encryptedData, iv)
+              },
+              fail(err) {
+                console.error(err)
+                login(encryptedData, iv)
+              }
+            })
+          }
+        })
+      } else {
+        wx.reLaunch({
+          url: '/pages/auth/login',
+          fail(res) {
+            console.log(res)
+          }
+        })
+      }
+    },
+    fail(err) {
+      console.error(err)
+      wx.reLaunch({
+        url: '/pages/auth/login',
+        fail(res) {
+          console.log(res)
+        }
+      })
+    }
+  })
+}
+
+export default {
+  login,
+  log
 }

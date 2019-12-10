@@ -1,3 +1,12 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "van-button": "/lib/vant/button/index",
+    "van-cell": "/lib/vant/cell/index",
+    "van-cell-group": "/lib/vant/cell-group/index",
+    "van-image": "/lib/vant/image/index",
+    "van-field": "/lib/vant/field/index",
+    "van-popup": "/lib/vant/popup/index",
+    "van-picker": "/lib/vant/picker/index",
+    "van-uploader": "/lib/vant/uploader/index"
+  }
 }

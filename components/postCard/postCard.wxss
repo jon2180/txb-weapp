@@ -6,40 +6,20 @@
   padding: 30rpx;
   box-sizing: border-box;
   background-color: #fff;
-  margin: 10rpx 0;
-}
-
-.post-box .author-block {
-  display: flex;
-  justify-content: left;
-  margin-bottom: 30rpx;
-}
-
-.author-block .avatar {
-  width: 98rpx;
-  height: 98rpx;
-  border: none;
-  border-radius: 50%;
-}
-
-.author-block .info {
-  height: 100%;
-  margin-left: 20rpx;
-}
-
-.author-block .info view {
-  line-height: 49rpx;
+  margin: 16rpx 0;
 }
 
 .post-box .content-block {
   /* margin-top: 30rpx; */
   width: 100%;
+  margin-bottom: 16rpx;
 }
 
 .post-box .images-block {
   display: flex;
   flex-wrap: wrap;
   width: 690rpx;
+  margin-bottom: 16rpx;
 }
 
 .images-block .image {

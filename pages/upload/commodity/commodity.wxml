@@ -1,79 +1,34 @@
 <!--pages/Upload/UploadSecondhand/UploadSecondhand.wxml-->
-<view class="content-container">
-  <view class="pub-title-remark">
-    <!-- 名字 -->
-    <input type="text" placeholder="输入你的闲置标题吧" bindinput="inputinfo" data-kind="name" 
-    style="padding:0 0 14rpx 0;border-bottom: 1px solid gainsboro;"/>
-    <!-- 备注 -->
-    <view wx:if="{{hideclass}}">
-      <textarea class="pub-remark" value="{{remark}}" placeholder="说说闲置的型号、属性和转手原因吧" bindinput="inputinfo" data-kind="remark"/>
-    </view>
-  </view>
-  <!-- 图片 -->
-  <view class="pub-image-box">
-    <view wx:for="{{images}}" wx:key="{{index}}" style="position:relative;">
-      <image wx:if="{{index<6}}" class="pub-image" mode="aspectFill" bindtap="chooseimage" data-seq="{{index}}" data-command="{{'enlarge'}}" src="{{item}}"/>
-      <view wx:if="{{index<images.length-1}}" 
-      style="height:32rpx;width:32rpx;position:absolute;top:14rpx;right:14rpx;background-color:none;z-index:999;font-size:32rpx;" 
-      bindtap="chooseimage" data-seq="{{index}}" data-command="{{'delete'}}">
-      ×
-      </view>
-    </view>
-  </view>
-  <view style="width:100%;background-color:white;margin:14rpx 0 0 0;">
-    <!-- 分类 -->
-    <view class="pub-text2">
-      <view style="width:342rpx;padding:0 0 0 14rpx;">分类</view>
-      <view bindtap="bindclass" style="width:342rpx;display:flex;flex-direction:row-reverse;align-items:center;">
-        <text space="ensp" style="font-size:64rpx;padding:0 0 10rpx 0;color:gray;"> ›</text>
-        <view wx:if="{{!class1st}}" style="color:gray;">选择分类</view>
-        <view wx:else>
-          <view wx:if="{{class1st==class2nd}}">{{class1st}}</view>
-          <view wx:else>{{class1st}}-{{class2nd}}</view>
-        </view>
-      </view>
-    </view>
-    <!-- 分类选择框 -->
-    <scroll-view scroll-y hidden="{{hideclass}}"
-    style="z-index:9999;position:fixed;top:0rpx;padding:0 25rpx;background-color:white;height:100%;width:700rpx;">
-      <view bindtap="chooseclasscancel">{{'<'}}</view>
-      <view style="display:flex;justify-content:center">选择分类</view>
-      <view wx:for="{{classes}}" wx:key="{{index}}" style="margin:14rpx;">
-        {{item.class1st}}
-        <view style="display:flex;flex-wrap:wrap;border:1px solid gainsboro;border-radius:20rpx">
-          <view wx:for="{{item.content}}" wx:key="{{index}}" bindtap="chooseclass" data-class12="{{item}}" 
-          style="width:150rpx;font-size:32rpx;padding:9rpx;display:flex;flex-direction:column">
-            <image src="{{item.src}}" style="height:150rpx;width:150rpx"/>
-            <view style="display:flex;justify-content:center">{{item.class2nd}}</view>
-          </view>
-        </view>
-      </view>
-    </scroll-view>
-    <!-- 成色 -->
-    <view class="pub-text2">
-      <view style="width:342rpx;padding:0 0 0 14rpx;">成色</view>
-      <picker bindchange="bindcondition" value="{{4}}" range="{{conditions}}">
-        <view style="width:342rpx;display:flex;flex-direction:row-reverse;align-items:center;">
-          <text space="ensp" style="font-size:64rpx;padding:0 0 10rpx 0;color:gray;"> ›</text>
-          <view wx:if="{{!condition}}" style="color:gray;">选择成色</view>
-          <view wx:else>
-            {{conditions[condition]}}
-          </view>
-        </view>
-      </picker>
-    </view>
-    <!-- 价格 -->
-    <view class="pub-text2" style="border-bottom:none">
-      <view style="width:342rpx;padding:0 0 0 14rpx;">价格</view>
-      <input type="digit" placeholder="开个价吧" bindinput="inputinfo" data-kind="price" style="width:342rpx;text-align:right"/>
-    </view>
-  </view>
-  <!-- 简单粗暴地解决内容被发布按钮挡住的问题 -->
-  <view style="height:115rpx;width:100%;background-color:none;"></view>
 
-  <!-- 发布 -->
-  <view style="position:fixed;bottom:0;height:115rpx;width:100%;background-color:#f9f9f9;">
-    <view class="publish" bindtap="publish">发布</view>
-  </view>
+<!-- 
+user_id number 是 用户id 1
+category_id number 是 商品类型 2
+goods_title string 是 商品标题 吹风机
+price number 是 商品价格 20
+goods_intro string 是 商品描述 松下水离子小功率宿舍用吹风机
+key_words string 是 关键词(多个关键词以'|'分隔) 吹风机|宿舍|电器
+new_old_index number 是 商品新旧程度 8
+img string 是 商品图片
+-->
 
+<view>
+  <view>
+    <van-cell-group>
+      <van-field value="{{ title }}" placeholder="请输入商品标题" border="{{ false }}" required bind:change="bindInputTitle" maxlength="64" />
+      <van-field value="{{ price }}" placeholder="请输入商品价格" border="{{ false }}" required bind:change="bindInputTitle" type="digit" />
+      <van-field value="{{ category }}" placeholder="请输入商品价格" border="{{ false }}" required readonly clickable bind:click="bindPickCategory" />
+      <van-field value="{{ desc }}" placeholder="请输入描述" border="{{ false }}" bind:change="bindInputTitle" autosize type="textarea" maxlength="300" />
+      <van-uploader file-list="{{ imgList }}" bind:after-read="afterRead" />
+    </van-cell-group>
+  </view>
+</view>
+
+<van-popup show="{{ showCategoryPanel }}" custom-style="height: 200rpx; width: 80%;" bind:close="bindCloseCategoriesPanel" close-on-click-overlay="{{false}}">
+  <van-picker columns="{{ categories }}" bind:change="bindInputTitle" default-index="{{ 0 }}" show-toolbar/>
+</van-popup>
+
+<view class="operations">
+  <van-button>
+    发布
+  </van-button>
 </view>

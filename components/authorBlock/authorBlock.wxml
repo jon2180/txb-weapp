@@ -1,10 +1,10 @@
 <!--components/AuthorBlock/AuthorBlock.wxml-->
 
-<view class="from">
+<view class="author-block">
   <!-- 头像：有则设置成对应头像，无则设置为默认的头像，当前默认头像是本地的 /images/user-unlogin.png -->
-  <image class="avatar" src="{{avatarUrl}}"></image>
+  <image class="avatar" src="{{avatarUrl ? avatarUrl : './user-unlogin.png'}}" />
   <view class="info">
-    <text>{{nickname}}</text>
-    <text>{{time}}</text>
+    <view>{{nickName || '匿名'}}</view>
+    <view wx:if="{{showTime}}">{{time || '...'}}</view>
   </view>
 </view>

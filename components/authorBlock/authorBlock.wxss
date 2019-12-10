@@ -1,1 +1,24 @@
 /* components/AuthorBlock/AuthorBlock.wxss */
+
+/* components/AuthorBlock/AuthorBlock.wxss */
+
+.author-block {
+  display: flex;
+  justify-content: left;
+}
+
+.author-block .avatar {
+  width: 98rpx;
+  height: 98rpx;
+  border: none;
+  border-radius: 50%;
+}
+
+.author-block .info {
+  height: 100%;
+  margin-left: 20rpx;
+}
+
+.author-block .info view {
+  line-height: 49rpx;
+}

@@ -1,2 +1,29 @@
 <!--pages/search/search/search.wxml-->
-<text>pages/search/search/search.wxml</text>
+
+<view>
+  <van-search value="{{ keyword }}" shape="round" placeholder="{{ '请输入关键词' }}" show-action bind:change="bindInput" bind:search="bindSearch" bind:cancel="bindCancel" />
+
+  <view class="recommendation block" wx:if="{{ recommendation.length }}">
+    <view class="title-container">
+      <view class="title">推荐搜索</view>
+    </view>
+
+    <view>
+      <text wx:for="{{recommendation}}" wx:key="{{index}}" class="keyword" data-keyword="{{item}}" catchtap="bindClickKeyword">{{item}}</text>
+    </view>
+  </view>
+
+  <view class="history block" wx:if="{{ history.length }}">
+    <view class="title-container">
+      <view class="title">搜索历史</view>
+      <view class="delete">
+        <van-icon name="delete" bindtap="bindClearHistory" />
+      </view>
+    </view>
+
+    <view>
+      <text wx:for="{{history}}" wx:key="{{index}}" class="keyword" data-keyword="{{item}}" catchtap="bindClickKeyword">{{item}}</text>
+    </view>
+  </view>
+
+</view>

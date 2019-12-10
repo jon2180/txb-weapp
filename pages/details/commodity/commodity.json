@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "c-author": "/components/authorBlock/authorBlock",
+    "c-images": "/components/imagesBlock/imagesBlock",
+    "van-button": "/lib/vant/button/index"
+  }
 }
