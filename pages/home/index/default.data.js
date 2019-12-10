@@ -1,6 +1,7 @@
 export const list = [{
   title: '美妆',
-  list: [{
+  list: [
+    {
       imageUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
       desc: '超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒',
       price: '112.12',

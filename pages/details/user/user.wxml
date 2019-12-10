@@ -1,2 +1,11 @@
 <!--pages/details/user/user.wxml-->
-<text>pages/details/user/user.wxml</text>
+
+<view>
+  <view class="profile-card">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view class="info">
+      <view class="info-nickname">{{userInfo.nickName}} | {{userInfo.gender}}</view>
+      <view class="info-nav_to_profile">{{userInfo.signature}}</view>
+    </view>
+  </view>
+</view>

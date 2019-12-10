@@ -7,9 +7,7 @@ import {
  */
 export const getCmds = (data) => {
   return txbRequest({
-    data: {
-
-    },
+    data,
     url: '/wx/goods/getGoodsList'
   })
 }

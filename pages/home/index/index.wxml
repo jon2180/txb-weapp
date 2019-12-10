@@ -19,13 +19,17 @@
   <!-- banner轮播图 END -->
 
   <!-- catogories area分类 START -->
-  <!-- <view class="categories">
+  <view class="categories">
     <van-grid clickable column-num="4">
-      <van-grid-item wx:for="{{categories}}" wx:key="{{index}}" icon="photo-o" text="{{item}}" url="../category/category"/>
+      <van-grid-item wx:for="{{categories}}" wx:key="{{index}}" icon="photo-o" text="{{item}}" url="../category/category?name={{item}}"/>
     </van-grid>
-  </view> -->
+  </view>
   <!-- catogories area分类 END -->
-  <view class="commodities-container">
+  <view class="goods-list">
+    <c-commodity-card wx:for="{{commodities}}" wx:key="{{index}}" commodity-info="{{item}}" url="../../details/commodity/commodity?_id=item._id" />
+  </view>
+
+  <!-- <view class="commodities-container">
     <van-tabs active="{{ active }}" bind:change="bindChangeTab" animated color="#00bd9c" sticky ellipsis lazy-render>
       <van-tab wx:for="{{list}}" wx:for-index="tabsIndex" wx:for-item="commodities" wx:key="{{tabsIndex}}"  name="{{tabsIndex}}" title="{{commodities.title}}">
         <view class="goods-list">
@@ -33,7 +37,7 @@
         </view>
       </van-tab>
     </van-tabs>
-  </view>
+  </view> -->
 
 </view>
 

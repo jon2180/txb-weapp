@@ -1,18 +1,20 @@
 {
   "pages": [
     "pages/home/index/index",
-    "pages/messages/index/index",
+    "pages/home/category/category",
     "pages/post/index/index",
-    "pages/me/index/index",
     "pages/upload/index/index",
     "pages/upload/commodity/commodity",
     "pages/upload/post/post",
+    "pages/messages/index/index",
+    "pages/me/index/index",
+    "pages/me/commodities/commodities",
+    "pages/me/posts/posts",
     "pages/auth/login/login",
+    "pages/search/index/index",
     "pages/details/user/user",
     "pages/details/commodity/commodity",
-    "pages/details/post/post",
-    "pages/search/index/index",
-    "pages/home/category/category"
+    "pages/details/post/post"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -21,11 +23,13 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
+    "color": "999999",
+    "selectedColor": "fd4647",
     "list": [
       {
         "pagePath": "pages/home/index/index",
-        "iconPath": "assets/images/index.png",
-        "selectedIconPath": "assets/images/index-active.png",
+        "iconPath": "assets/icons-tabbar/home.png",
+        "selectedIconPath": "assets/icons-tabbar/home-selected.png",
         "text": "淘淘"
       },
       {
@@ -36,8 +40,8 @@
       },
       {
         "pagePath": "pages/upload/index/index",
-        "iconPath": "assets/images/index.png",
-        "selectedIconPath": "assets/images/index-active.png",
+        "iconPath": "assets/icons-tabbar/upload.png",
+        "selectedIconPath": "assets/icons-tabbar/upload-selected.png",
         "text": "发布"
       },
       {
@@ -48,8 +52,8 @@
       },
       {
         "pagePath": "pages/me/index/index",
-        "iconPath": "assets/images/index.png",
-        "selectedIconPath": "assets/images/index-active.png",
+        "iconPath": "assets/icons-tabbar/me.png",
+        "selectedIconPath": "assets/icons-tabbar/me-selected.png",
         "text": "我的"
       }
     ]

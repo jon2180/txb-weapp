@@ -16,7 +16,7 @@ img string 是 商品图片
     <van-cell-group>
       <van-field value="{{ title }}" placeholder="请输入商品标题" border="{{ false }}" required bind:change="bindInputTitle" maxlength="64" />
       <van-field value="{{ price }}" placeholder="请输入商品价格" border="{{ false }}" required bind:change="bindInputTitle" type="digit" />
-      <van-field value="{{ category }}" placeholder="请输入商品价格" border="{{ false }}" required readonly clickable bind:click="bindPickCategory" />
+      <van-field value="{{ category }}" placeholder="请选择商品分类" border="{{ false }}" required readonly clickable bind:click="bindPickCategory" />
       <van-field value="{{ desc }}" placeholder="请输入描述" border="{{ false }}" bind:change="bindInputTitle" autosize type="textarea" maxlength="300" />
       <van-uploader file-list="{{ imgList }}" bind:after-read="afterRead" />
     </van-cell-group>
@@ -27,7 +27,7 @@ img string 是 商品图片
   <van-picker columns="{{ categories }}" bind:change="bindInputTitle" default-index="{{ 0 }}" show-toolbar/>
 </van-popup>
 
-<view class="operations">
+<view class="oprts">
   <van-button>
     发布
   </van-button>

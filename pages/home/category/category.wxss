@@ -1,1 +1,17 @@
 /* pages/home/category/category.wxss */
+
+
+.commodities-container {
+  width: 750rpx;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+}
+
+.goods-list {
+  width: 690rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20rpx;
+  flex-wrap: wrap;
+}

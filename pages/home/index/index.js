@@ -2,10 +2,9 @@
 //获取应用实例
 const app = getApp()
 
-/* import {
+import {
   getCmds
 } from '../../../api/home.js'
- */
 
 import {
   getSchools
@@ -31,13 +30,16 @@ Page({
     /** tab面板 */
     active: '',
     list: list,
+    commodities: [...list[0].list],
 
     showCheckSchool: false,
     schools: [],
   },
 
   onLoad(options) {
-    // getCmds()
+    getCmds().then(res => {
+      // console.log(res)
+    })
     // console.log(list[0].title)
     // 允许传参数
     if (options)

@@ -1,3 +1,5 @@
 {
-  "usingComponents": {}
+  "usingComponents": {
+    "c-images-block": "/components/imagesBlock/imagesBlock"
+  }
 }

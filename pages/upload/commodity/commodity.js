@@ -1,5 +1,7 @@
 // pages/upload/commodity/commodity.js
 
+import { uploadCommodity } from '../../../api/upload.js'
+
 // import {
 //   uploadFileSync
 // } from '../../../utils/wx-api.js'
@@ -41,6 +43,7 @@ Page({
 
   bindPickCategory(e) {
     console.log(e)
+    
   },
 
   afterRead() {

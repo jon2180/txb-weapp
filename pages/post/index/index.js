@@ -33,6 +33,72 @@ Page({
     }],
 
     active: 0,
+    gossip: [{
+      origin: {
+        avatarUrl: 'https://n.sinaimg.cn/sinacn13/448/w1024h1024/20180504/e7d2-fzyqqiq8227715.jpg',
+        nickName: '123456',
+      },
+      time: '15:30',
+      content: '表白今晚迎新晚会上唱《我在那一角落患过伤风》的女孩子。',
+      tags: ['表白', '歌曲'],
+      like: 110,
+      comments: 6,
+    }, {
+      origin: {
+        avatarUrl: 'https://n.sinaimg.cn/sinacn13/448/w1024h1024/20180504/e7d2-fzyqqiq8227715.jpg',
+        nickName: '123456',
+      },
+      time: '15:30',
+      content: '表白今晚迎新晚会上唱《我在那一角落患过伤风》的女孩子。',
+      tags: ['表白', '歌曲'],
+      like: 110,
+      comments: 6,
+    }],
+
+    consultation: [{
+      origin: {
+        avatarUrl: 'https://n.sinaimg.cn/sinacn13/448/w1024h1024/20180504/e7d2-fzyqqiq8227715.jpg',
+        nickName: '123456',
+      },
+      time: '15:30',
+      content: '表白今晚迎新晚会上唱《我在那一角落患过伤风》的女孩子。',
+      tags: ['表白', '歌曲'],
+      like: 110,
+      comments: 6,
+    }, {
+      origin: {
+        avatarUrl: 'https://n.sinaimg.cn/sinacn13/448/w1024h1024/20180504/e7d2-fzyqqiq8227715.jpg',
+        nickName: '123456',
+      },
+      time: '15:30',
+      content: '表白今晚迎新晚会上唱《我在那一角落患过伤风》的女孩子。',
+      tags: ['表白', '歌曲'],
+      like: 110,
+      comments: 6,
+    }],
+
+    helps: [{
+      origin: {
+        avatarUrl: 'https://n.sinaimg.cn/sinacn13/448/w1024h1024/20180504/e7d2-fzyqqiq8227715.jpg',
+        nickName: '123456',
+      },
+      time: '15:30',
+      content: '表白今晚迎新晚会上唱《我在那一角落患过伤风》的女孩子。',
+      tags: ['表白', '歌曲'],
+      like: 110,
+      comments: 6,
+    }, {
+      origin: {
+        avatarUrl: 'https://n.sinaimg.cn/sinacn13/448/w1024h1024/20180504/e7d2-fzyqqiq8227715.jpg',
+        nickName: '123456',
+      },
+      time: '15:30',
+      content: '表白今晚迎新晚会上唱《我在那一角落患过伤风》的女孩子。',
+      tags: ['表白', '歌曲'],
+      like: 110,
+      comments: 6,
+    }], 
+
     list: [{
       title: '闲聊',
       data: [{
@@ -189,7 +255,7 @@ Page({
   bindClickPost(e) {
     console.log(e)
     wx.navigateTo({
-      url: `../detail/detail?_id=${e.detail._id}`,
+      url: `/pages/details/post/post?_id=${e.detail._id}`,
     })
   },
 

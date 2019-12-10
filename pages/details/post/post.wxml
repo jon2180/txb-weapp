@@ -1,2 +1,40 @@
-<!--pages/details/post/post.wxml-->
-<text>pages/details/post/post.wxml</text>
+<!--miniprogram/pages/ConfessionDetail/ConfessionDetail.wxml-->
+
+<view class="post-box">
+  <view class="author-block">
+    <!-- 头像：有则设置成对应头像，无则设置为默认的头像，当前默认头像是本地的 /images/user-unlogin.png -->
+    <image class="avatar" src="{{userInfo.avatarUrl ? userInfo.avatarUrl : '/images/user-unlogin.png'}}"></image>
+    <view class="info">
+      <view>{{userInfo.nickname || '佚名'}}</view>
+      <view>{{confession.time}}</view>
+    </view>
+  </view>
+
+
+  <view class="content-block">{{confession.content}}</view>
+  <c-images-block images="{{confession.images}}"/>
+  <view class="tags-block">
+    <view
+      wx:for="{{confession.tags}}"
+      wx:key="{{index}}"
+      class="tag"
+    >#{{item}}#</view>  
+  </view>
+  <view class="heat-block">
+    <view bindtap="bindLikeConfession">{{confession.likes}} 喜欢</view>
+    <view>{{confession.comments.length}} 评论</view>
+  </view>
+</view>
+
+<view class="comments-box">
+  <view wx:if="{{confession.comments.length === 0}}">
+  暂无评论
+  </view>
+  <view wx:else>
+    <view wx:for="{{confession.comments}}" wx:key="{{index}}">
+      <view>
+        {{item}}
+      </view>
+    </view>
+  </view>
+</view>

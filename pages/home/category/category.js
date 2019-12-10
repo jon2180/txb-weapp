@@ -1,66 +1,174 @@
 // pages/home/category/category.js
+
+import Toast from '../../../lib/vant/toast/toast';
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    commodities: [{
+        imageUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+        desc: '超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒',
+        price: '112.12',
+        tags: ['no bargain'],
+        clickNum: 34,
+        time: '5分钟前',
+        origin: {
+          avatarUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+          nickname: 'flyfly',
+          tags: ['No.5', 'verified'],
+        },
+      }, {
+        imageUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+        desc: '超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒',
+        price: '112.12',
+        tags: ['no bargain'],
+        clickNum: 34,
+        time: '5分钟前',
+        origin: {
+          avatarUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+          nickname: 'flyfly',
+          tags: ['No.5', 'verified'],
+        },
+      }, {
+        imageUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+        desc: '超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒',
+        price: '112.12',
+        tags: ['no bargain'],
+        clickNum: 34,
+        time: '5分钟前',
+        origin: {
+          avatarUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+          nickname: 'flyfly',
+          tags: ['No.5', 'verified'],
+        },
+      }, {
+        imageUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+        desc: '超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒',
+        price: '112.12',
+        tags: ['no bargain'],
+        clickNum: 34,
+        time: '5分钟前',
+        origin: {
+          avatarUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+          nickname: 'flyfly',
+          tags: ['No.5', 'verified'],
+        },
+      }, {
+        imageUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+        desc: '超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒',
+        price: '112.12',
+        tags: ['no bargain'],
+        clickNum: 34,
+        time: '5分钟前',
+        origin: {
+          avatarUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+          nickname: 'flyfly',
+          tags: ['No.5', 'verified'],
+        },
+      }, {
+        imageUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+        desc: '超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒',
+        price: '112.12',
+        tags: ['no bargain'],
+        clickNum: 34,
+        time: '5分钟前',
+        origin: {
+          avatarUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+          nickname: 'flyfly',
+          tags: ['No.5', 'verified'],
+        },
+      }, {
+        imageUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+        desc: '超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒',
+        price: '112.12',
+        tags: ['no bargain'],
+        clickNum: 34,
+        time: '5分钟前',
+        origin: {
+          avatarUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+          nickname: 'flyfly',
+          tags: ['No.5', 'verified'],
+        },
+      }, {
+        imageUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+        desc: '超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒',
+        price: '112.12',
+        tags: ['no bargain'],
+        clickNum: 34,
+        time: '5分钟前',
+        origin: {
+          avatarUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+          nickname: 'flyfly',
+          tags: ['No.5', 'verified'],
+        },
+      }, {
+        imageUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+        desc: '超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒超级棒',
+        price: '112.12',
+        tags: ['no bargain'],
+        clickNum: 34,
+        time: '5分钟前',
+        origin: {
+          avatarUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+          nickname: 'flyfly',
+          tags: ['No.5', 'verified'],
+        },
+      },
+      {
+        imageUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+        desc: '超级棒',
+        price: '112.12',
+        tags: ['no bargain'],
+        time: '5分钟前',
+        clickNum: 34,
+        origin: {
+          avatarUrl: 'https://image.freepik.com/free-vector/professional-website-banner-with-red-shapes_1361-1532.jpg',
+          nickname: 'flyfly',
+          tags: ['No.5', 'verified'],
+        },
+      },
 
+    ],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
+    if (!options.name) {
+      Toast.fail('没有传递分类id')
+      wx.navigateBack({
+        delta: 1,
+      })
+      return
+    }
+    
+    // 设置title
+    wx.setNavigationBarTitle({
+      title: options.name
+    })
 
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+    // 请求数据
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  getCommodities() {
+    
   }
 })

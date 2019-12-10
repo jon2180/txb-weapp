@@ -1,2 +1,5 @@
 <!--pages/home/category/category.wxml-->
-<text>pages/home/category/category.wxml</text>
+
+  <view class="goods-list">
+    <c-commodity-card wx:for="{{commodities}}" wx:key="{{index}}" commodity-info="{{item}}" url="../../details/commodity/commodity?_id=item._id" />
+  </view>

@@ -1,46 +1,51 @@
-<!--pages/me/index/index.wxml-->
-
+<!-- pages/me/index/index.wxml -->
 <view>
-  <view class="profile-card">
-    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
-    <view class="info">
-      <view class="info-nickname">{{userInfo.nickName}} | {{userInfo.gender}}</view>
-      <view class="info-nav_to_profile">
-        <navigator url="../../details/user/user?openid={{openid}}" hover-class="none">
-          主页 >
-        </navigator>
+  <view class="profile">
+    <view class="profile-card">
+      <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+      <view class="info">
+        <view class="info-nickname">{{userInfo.nickName}} | {{userInfo.gender}}</view>
+        <view class="info-nav_to_profile">
+          <navigator url="../../details/user/user?id={{id}}" hover-class="none">主页 ></navigator>
+        </view>
       </view>
     </view>
+    <view>共发布{{12}}件商品，卖出{{5}}件。共发布{{4}}个主题贴</view>
   </view>
-
   <view class="main-card">
-    <van-grid border="false" clickable>
-      <van-grid-item icon="photo-o" text="我的闲置" />
-      <van-grid-item icon="photo-o" text="我的买入" />
-      <van-grid-item icon="photo-o" text="我的卖出" />
+    <van-grid border="false" column-num="3" clickable>
+      <van-grid-item icon="photo-o" text="我的闲置" url="../commodities/commodities" />
+      <van-grid-item icon="photo-o" text="我的买入" url="../commodities/commodities" />
+      <van-grid-item icon="photo-o" text="我的卖出" url="../commodities/commodities" />
     </van-grid>
   </view>
-
-  <!-- <view class="main-card">
-    <van-grid border="false" clickable>
-      <van-grid-item icon="photo-o" text="我的拼单" />
-      <van-grid-item icon="photo-o" text="我的打听" />
-      <van-grid-item icon="photo-o" text="我的收藏" />
+  <view class="main-card">
+    <van-grid border="false" column-num="3" clickable>
+      <van-grid-item icon="photo-o" text="我的拼单" url="../posts/posts" />
+      <van-grid-item icon="photo-o" text="我的打听" url="../posts/posts" />
+      <van-grid-item icon="photo-o" text="我的收藏" url="../posts/posts" />
     </van-grid>
-  </view> -->
+  </view>
   <view>
-    <van-cell title="个人信息" icon="user-circle-o" is-link url="../info/info">
-      <view slot="title">
+    <van-cell-group title="更多">
+      <van-cell title="个人信息" icon="user-circle-o" is-link url="../info/info">
+        <view slot="title">
+          <van-icon slot="right-icon" name="search" class="custom-icon" />
+        </view>
+      </van-cell>
+      <van-cell title="设置" icon="setting-o" is-link>
         <van-icon slot="right-icon" name="search" class="custom-icon" />
-      </view>
-    </van-cell>
-    <van-cell title="设置" icon="setting-o" is-link>
-      <van-icon slot="right-icon" name="search" class="custom-icon" />
-    </van-cell>
-    <van-cell title="分享" icon="share" is-link bind:click="bindShare">
-      <van-icon slot="right-icon" name="search" class="custom-icon" />
-    </van-cell>
+      </van-cell>
+      <!-- </van-cell-group> -->
+      <!-- <van-cell-group title="淘小北"> -->
+      <van-cell title="关于我们" icon="setting-o" is-link>
+        <view slot="title">
+          <van-icon slot="right-icon" name="search" class="custom-icon" />
+        </view>
+      </van-cell>
+      <van-cell title="分享" icon="share" is-link bind:click="bindShare">
+        <van-icon slot="right-icon" name="search" class="custom-icon" />
+      </van-cell>
+    </van-cell-group>
   </view>
-
-
 </view>

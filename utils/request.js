@@ -37,6 +37,9 @@ export const requestApi = (config) => new Promise((resolve, reject) => wx.reques
   }
 }))
 
+/**
+ * @return {Promise<Request>}
+ */
 export const txbRequest = ({
   data,
   url,
