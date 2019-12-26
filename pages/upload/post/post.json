@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "van-action-sheet": "/lib/vant/action-sheet/index"
-  },
-  "navigationBarTitleText": "上传表白"
-}

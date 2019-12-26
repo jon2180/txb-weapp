@@ -2,19 +2,14 @@
   "pages": [
     "pages/home/index/index",
     "pages/home/category/category",
-    "pages/post/index/index",
     "pages/upload/index/index",
     "pages/upload/commodity/commodity",
-    "pages/upload/post/post",
-    "pages/messages/index/index",
     "pages/me/index/index",
     "pages/me/commodities/commodities",
-    "pages/me/posts/posts",
     "pages/auth/login/login",
     "pages/search/index/index",
     "pages/details/user/user",
-    "pages/details/commodity/commodity",
-    "pages/details/post/post"
+    "pages/details/commodity/commodity"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -33,22 +28,10 @@
         "text": "淘淘"
       },
       {
-        "pagePath": "pages/post/index/index",
-        "iconPath": "assets/icons-tabbar/upload.png",
-        "selectedIconPath": "assets/icons-tabbar/upload-selected.png",
-        "text": "校园通"
-      },
-      {
         "pagePath": "pages/upload/index/index",
         "iconPath": "assets/icons-tabbar/upload.png",
         "selectedIconPath": "assets/icons-tabbar/upload-selected.png",
         "text": "发布"
-      },
-      {
-        "pagePath": "pages/messages/index/index",
-        "iconPath": "assets/icons-tabbar/upload.png",
-        "selectedIconPath": "assets/icons-tabbar/upload-selected.png",
-        "text": "消息"
       },
       {
         "pagePath": "pages/me/index/index",

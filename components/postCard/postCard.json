@@ -1,8 +1,0 @@
-{
-  "component": true,
-  "usingComponents": {
-    "c-images-block": "/components/imagesBlock/imagesBlock",
-    "c-author-block": "/components/authorBlock/authorBlock",
-    "van-icon": "/lib/vant/icon/index"
-  }
-}

@@ -3,3 +3,61 @@
 page {
   background-color: #f6f6f6;
 }
+
+/* 标题 */
+.font-1 {
+  font-family: "Ping Fang SC Semibold", sans-serif;
+}
+
+/* 副标题 */
+.font-2 {
+  font-family: "Ping Fang SC Regular", sans-serif;
+}
+
+/* 内容 */
+.font-3 {
+  font-family: "Ping Fang SC Light", sans-serif;
+}
+
+.accent-color-1 {
+  color: #ff8497;
+}
+
+.accent-color-2 {
+  color: #fd4647;
+}
+
+.complementary-color-1-1 {
+  color: #fff291;
+}
+
+.complementary-color-1-2 {
+  color: #ffcb3d;
+}
+
+.complementary-color-2 {
+  color: #3b73ff;
+}
+
+.text-color-1 {
+  color: #000;
+}
+
+/* 主标题 */
+.text-color-1 {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* 内容 */
+.text-color-2 {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* 辅助文本 */
+.text-color-3 {
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.bg-color {
+  background-color: #f3f6f8;
+}
