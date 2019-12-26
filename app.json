@@ -34,8 +34,8 @@
       },
       {
         "pagePath": "pages/post/index/index",
-        "iconPath": "assets/images/index.png",
-        "selectedIconPath": "assets/images/index-active.png",
+        "iconPath": "assets/icons-tabbar/upload.png",
+        "selectedIconPath": "assets/icons-tabbar/upload-selected.png",
         "text": "校园通"
       },
       {
@@ -46,8 +46,8 @@
       },
       {
         "pagePath": "pages/messages/index/index",
-        "iconPath": "assets/images/index.png",
-        "selectedIconPath": "assets/images/index-active.png",
+        "iconPath": "assets/icons-tabbar/upload.png",
+        "selectedIconPath": "assets/icons-tabbar/upload-selected.png",
         "text": "消息"
       },
       {
